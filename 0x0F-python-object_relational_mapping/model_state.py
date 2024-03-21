@@ -1,24 +1,16 @@
 #!/usr/bin/python3
-"""contains the class definition of a State and an instance
-Base = declarative_base()
-"""
+"""Module that containes the class definition of a State and instance Base"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
+
 
 Base = declarative_base()
 
 
 class State(Base):
-    """class definition of a State
-
-    Attributes:
-        __tablename__ (str): name of the table
-        id:   represents a column of an auto-generated, unique integer,
-              can’t be null and is a primary key
-        name: represents a column of a string with maximum 128 characters and
-              can’t be null
-
-    """
+    """State class that inherists from Base declarative"""
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(Integer, autoincrement=True, unique=True,
+                nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
