@@ -26,4 +26,4 @@ At the end of this project, I was able to solve these questions:
 * How to make a GET request with jQuery Ajax
 * How to make a POST request with jQuery Ajax
 * How to listen/bind to DOM events
-* How to listen/bind to user events
+* How to listen/bind to user events.
